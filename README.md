@@ -1,1 +1,6 @@
 # AWarZeus-web-project
+
+Project 2 - HTML Foundation Page
+    1. The theme of this webpage is my hobby of rock climbing and using HTML to build a visually appealing webpage. The page explains how I got started with climbing and how my skills have progressed over time to where I am today.
+    2. I learned a lot while creating this webpage. I wanted to rely on CSS to improve the appearance of websites, so doing everything using only HTML was interesting and a good learning experience. I found that using features like borders and spacing can still make a big difference even without CSS. I also learned how to create a navigation bar to move between different sections of the website.
+    3. One challenge I faced was properly linking my images and making sure they displayed correctly, along with getting the "Home" button at the top to work. This took longer than I expected, but once I understood how relative file paths work, it became much easier to fix. Overall, it helped me better understand how website files are organized and connected.
