@@ -1,14 +1,14 @@
 const form = document.getElementById("projectForm");
 const projectList = document.getElementById("projectList");
 
-let projects = JSON.parse(localStorage.getItem("projects")) || [];
+let messages = JSON.parse(localStorage.getItem("woodworkingMessages")) || [];
 
-function displayProjects() {
+function displayMessages() {
     projectList.innerHTML = "";
 
-    projects.forEach(function(project) {
+    messages.forEach(function(message) {
         const listItem = document.createElement("li");
-        listItem.textContent = project.name + " wants to build: " + project.idea;
+        listItem.textContent = message.name + " (" + message.email + "): " + message.text;
         projectList.appendChild(listItem);
     });
 }
@@ -16,18 +16,20 @@ function displayProjects() {
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const name = document.getElementById("visitorName").value;
-    const projectIdea = document.getElementById("projectIdea").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("mail").value;
+    const text = document.getElementById("msg").value;
 
-    projects.push({
+    messages.push({
         name: name,
-        idea: projectIdea
+        email: email,
+        text: text
     });
 
-    localStorage.setItem("projects", JSON.stringify(projects));
+    localStorage.setItem("woodworkingMessages", JSON.stringify(messages));
 
-    displayProjects();
+    displayMessages();
     form.reset();
 });
 
-displayProjects();
+displayMessages();
